@@ -17,6 +17,7 @@ API4Biztalk.use(express.json());        // to support JSON-encoded bodies
 API4Biztalk.get('/pos/addQuota', (req, res) => addQuota(req, res));
 API4Biztalk.get('/ext/addQuota', (req, res) => addQuotaExt(req, res));
 API4Biztalk.get('/addCardInfos', (req, res) => addCardInfos(req, res));
+API4Biztalk.get('/printsys/addQuota', (req, res) => addQuotaToPrintSys(req, res));
 
 API4Biztalk.get('/me/want/da/logs/boay', (req, res) => {
     readLastLines.read('logs/access.log', 15)
@@ -40,6 +41,10 @@ function addQuotaExt(req, res){
 }
 
 function addCardInfos(req, res){
+    printUrl(req, res);
+}
+
+function addQuotaToPrintSys(req, res){
     printUrl(req, res);
 }
 
