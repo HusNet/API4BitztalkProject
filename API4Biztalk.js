@@ -21,7 +21,7 @@ API4Biztalk.get('/addCardInfos', (req, res) => addCardInfos(req, res));
 API4Biztalk.get('/me/want/da/logs/boay', (req, res) => {
     readLastLines.read('logs/access.log', 15)
     .then((logs) => {
-        let lines = logs.split('\r\n');
+        let lines = logs.split('\n');
 
         res.end(JSON.stringify({'logs' : lines}));
     });    
