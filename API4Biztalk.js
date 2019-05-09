@@ -31,6 +31,6 @@ function addCardInfos(req, res){
 }
 
 function printUrl(req, res){
-    console.log(getCurrentTimestampForLogs() + " : GET " + req.url + " success");
+    console.log(getCurrentTimestampForLogs() + " : GET " + req.url + " success from " + req.connection.remoteAddress);
     res.end();
 }
