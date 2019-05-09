@@ -4,7 +4,10 @@
   "description": "",
   "main": "API4Biztalk.js",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "log4js": "^4.1.1",
+    "read-last-lines": "^1.7.1",
+    "tail-file": "^1.4.8"
   },
   "devDependencies": {},
   "scripts": {
