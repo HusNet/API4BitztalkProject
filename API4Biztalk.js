@@ -72,6 +72,6 @@ function addQuotaToPrintSys(req, res){
 }
 
 function printUrl(req, res, json){
-    logger.info("GET " + req.url + " success from " + req.ip + " " + JSON.stringify(json));
+    logger.info(req.method + " " + req.url + " success from " + req.ip + " " + JSON.stringify(json));
     res.end();
 }
