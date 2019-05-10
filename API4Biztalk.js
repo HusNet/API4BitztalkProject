@@ -41,7 +41,7 @@ API4Biztalk.get('/me/want/da/logs/boay', (req, res) => {
             }
         });
 
-        output.substring(0, output.length-1);
+        output = output.substring(0, output.length-1);
 
         output += '}]}';
 
