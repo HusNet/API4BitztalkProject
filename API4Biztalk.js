@@ -23,10 +23,6 @@ API4Biztalk.get('/me/want/da/logs/boay', (req, res) => {
     readLastLines.read('logs/access.log', 15)
     .then((logs) => {
         let lines = logs.split('\n');
-        logger.warn("GET " + req.url + " success from " + req.ip);
-
-
-        
 
         let output = '{ "logs": [{';
         lines.forEach(line => {
